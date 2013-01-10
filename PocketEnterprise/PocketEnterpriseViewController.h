@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PocketEnterpriseViewController : UIViewController
+@interface PocketEnterpriseViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UITextField *UIEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *UIPasswordTextField;
 
+- (IBAction)loginButtonPressed:(id)sender;
 @end

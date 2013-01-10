@@ -13,11 +13,27 @@
 @end
 
 @implementation PocketEnterpriseViewController
+@synthesize UIEmailTextField;
+@synthesize UIPasswordTextField;
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)loginButtonPressed:(id)sender {
+    NSLog(@"Log In button was pressed!");
+}
 @end

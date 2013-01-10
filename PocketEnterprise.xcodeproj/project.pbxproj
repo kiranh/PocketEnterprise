@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153DAC4D8B59425AAA5AA03B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A103E72D44C54E098B53FB6D /* libPods.a */; };
 		9F0600B3169D978800E9DE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B2169D978800E9DE1C /* UIKit.framework */; };
 		9F0600B5169D978800E9DE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B4169D978800E9DE1C /* Foundation.framework */; };
 		9F0600B7169D978800E9DE1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B6169D978800E9DE1C /* CoreGraphics.framework */; };
@@ -18,12 +19,13 @@
 		9F0600C9169D978900E9DE1C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600C8169D978900E9DE1C /* Default-568h@2x.png */; };
 		9F0600CC169D978900E9DE1C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600CA169D978900E9DE1C /* MainStoryboard_iPhone.storyboard */; };
 		9F0600CF169D978900E9DE1C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600CD169D978900E9DE1C /* MainStoryboard_iPad.storyboard */; };
-		9F0600D2169D978900E9DE1C /* PocketEnterpriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600D1169D978900E9DE1C /* PocketEnterpriseViewController.m */; };
 		9F0600DA169D978900E9DE1C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600D9169D978900E9DE1C /* SenTestingKit.framework */; };
 		9F0600DB169D978900E9DE1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B2169D978800E9DE1C /* UIKit.framework */; };
 		9F0600DC169D978900E9DE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B4169D978800E9DE1C /* Foundation.framework */; };
 		9F0600E4169D978900E9DE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600E2169D978900E9DE1C /* InfoPlist.strings */; };
 		9F0600E7169D978900E9DE1C /* PocketEnterpriseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */; };
+		9F0600FD169D9F6000E9DE1C /* PocketEnterpriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */; };
+		9F060106169DABC600E9DE1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F060105169DABC600E9DE1C /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3003317519664D0B8C30C4FE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9F0600AE169D978800E9DE1C /* PocketEnterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketEnterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0600B2169D978800E9DE1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9F0600B4169D978800E9DE1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,14 +55,17 @@
 		9F0600C8169D978900E9DE1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9F0600CB169D978900E9DE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		9F0600CE169D978900E9DE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		9F0600D0169D978900E9DE1C /* PocketEnterpriseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseViewController.h; sourceTree = "<group>"; };
-		9F0600D1169D978900E9DE1C /* PocketEnterpriseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseViewController.m; sourceTree = "<group>"; };
 		9F0600D8169D978900E9DE1C /* PocketEnterpriseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketEnterpriseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0600D9169D978900E9DE1C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9F0600E1169D978900E9DE1C /* PocketEnterpriseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PocketEnterpriseTests-Info.plist"; sourceTree = "<group>"; };
 		9F0600E3169D978900E9DE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F0600E5169D978900E9DE1C /* PocketEnterpriseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseTests.h; sourceTree = "<group>"; };
 		9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseTests.m; sourceTree = "<group>"; };
+		9F0600FB169D9F6000E9DE1C /* PocketEnterpriseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseViewController.h; sourceTree = "<group>"; };
+		9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseViewController.m; sourceTree = "<group>"; };
+		9F060104169DABC500E9DE1C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F060105169DABC600E9DE1C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A103E72D44C54E098B53FB6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 				9F0600B3169D978800E9DE1C /* UIKit.framework in Frameworks */,
 				9F0600B5169D978800E9DE1C /* Foundation.framework in Frameworks */,
 				9F0600B7169D978800E9DE1C /* CoreGraphics.framework in Frameworks */,
+				153DAC4D8B59425AAA5AA03B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +100,7 @@
 				9F0600DF169D978900E9DE1C /* PocketEnterpriseTests */,
 				9F0600B1169D978800E9DE1C /* Frameworks */,
 				9F0600AF169D978800E9DE1C /* Products */,
+				3003317519664D0B8C30C4FE /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +120,7 @@
 				9F0600B4169D978800E9DE1C /* Foundation.framework */,
 				9F0600B6169D978800E9DE1C /* CoreGraphics.framework */,
 				9F0600D9169D978900E9DE1C /* SenTestingKit.framework */,
+				A103E72D44C54E098B53FB6D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,8 +132,10 @@
 				9F0600C2169D978900E9DE1C /* PocketEnterpriseAppDelegate.m */,
 				9F0600CA169D978900E9DE1C /* MainStoryboard_iPhone.storyboard */,
 				9F0600CD169D978900E9DE1C /* MainStoryboard_iPad.storyboard */,
-				9F0600D0169D978900E9DE1C /* PocketEnterpriseViewController.h */,
-				9F0600D1169D978900E9DE1C /* PocketEnterpriseViewController.m */,
+				9F060104169DABC500E9DE1C /* ViewController.h */,
+				9F060105169DABC600E9DE1C /* ViewController.m */,
+				9F0600FB169D9F6000E9DE1C /* PocketEnterpriseViewController.h */,
+				9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */,
 				9F0600B9169D978800E9DE1C /* Supporting Files */,
 			);
 			path = PocketEnterprise;
@@ -173,6 +184,7 @@
 				9F0600AA169D978800E9DE1C /* Sources */,
 				9F0600AB169D978800E9DE1C /* Frameworks */,
 				9F0600AC169D978800E9DE1C /* Resources */,
+				C0D020CFB4C542D0BE277486 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +280,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		C0D020CFB4C542D0BE277486 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,7 +303,8 @@
 			files = (
 				9F0600BF169D978800E9DE1C /* main.m in Sources */,
 				9F0600C3169D978900E9DE1C /* PocketEnterpriseAppDelegate.m in Sources */,
-				9F0600D2169D978900E9DE1C /* PocketEnterpriseViewController.m in Sources */,
+				9F0600FD169D9F6000E9DE1C /* PocketEnterpriseViewController.m in Sources */,
+				9F060106169DABC600E9DE1C /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,22 +416,32 @@
 		};
 		9F0600EB169D978900E9DE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3003317519664D0B8C30C4FE /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd/";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd/";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PocketEnterprise/PocketEnterprise-Prefix.pch";
 				INFOPLIST_FILE = "PocketEnterprise/PocketEnterprise-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6425231B-9556-4127-8232-0B249F24B046";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6425231B-9556-4127-8232-0B249F24B046";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		9F0600EC169D978900E9DE1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3003317519664D0B8C30C4FE /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd/";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd/";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PocketEnterprise/PocketEnterprise-Prefix.pch";
 				INFOPLIST_FILE = "PocketEnterprise/PocketEnterprise-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6425231B-9556-4127-8232-0B249F24B046";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6425231B-9556-4127-8232-0B249F24B046";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -462,6 +499,7 @@
 				9F0600EC169D978900E9DE1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F0600ED169D978900E9DE1C /* Build configuration list for PBXNativeTarget "PocketEnterpriseTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +508,7 @@
 				9F0600EF169D978900E9DE1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
