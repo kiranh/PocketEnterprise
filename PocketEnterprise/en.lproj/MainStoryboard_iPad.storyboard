@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to Pocket Enterprise. Press Login to Continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-E4-9g1">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Welcome to Pocket Enterprise. Press Login to Continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-E4-9g1">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="lsO-hr-2qA"/>
                                 </constraints>
@@ -20,7 +20,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-au-dRG">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-au-dRG">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="a7T-pn-A1Y"/>
                                     <constraint firstAttribute="width" constant="187" id="rtz-w5-zaM"/>
@@ -40,17 +40,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JrL-au-dRG" firstAttribute="top" secondItem="5" secondAttribute="top" constant="430" id="PEo-GW-BHN"/>
-                            <constraint firstItem="tz3-E4-9g1" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="PcB-fo-R13"/>
-                            <constraint firstItem="tz3-E4-9g1" firstAttribute="top" secondItem="5" secondAttribute="top" constant="175" id="mOC-Yk-law"/>
-                            <constraint firstItem="JrL-au-dRG" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="279" id="xSL-bI-Y6n"/>
+                            <constraint firstItem="JrL-au-dRG" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="274" id="9D5-0E-mUF"/>
+                            <constraint firstItem="tz3-E4-9g1" firstAttribute="top" secondItem="5" secondAttribute="top" constant="178" id="O5n-Fu-opM"/>
+                            <constraint firstItem="JrL-au-dRG" firstAttribute="top" secondItem="5" secondAttribute="top" constant="423" id="oy3-Lh-lhp"/>
+                            <constraint firstItem="tz3-E4-9g1" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="181" id="st5-YP-8rq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pocket Enterprise" id="azJ-ow-49F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="-271"/>
+            <point key="canvasLocation" x="3038" y="-271"/>
         </scene>
         <!--Pocket Enterprise View Controller-->
         <scene sceneID="E3C-pd-0eg">
@@ -130,7 +130,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dEG-ru-IRZ">
-                        <barButtonItem key="rightBarButtonItem" title="Log In" id="Jeq-d1-CzA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Jeq-d1-CzA">
                             <connections>
                                 <action selector="loginButtonPressed:" destination="cpW-is-iyp" id="Nm3-Kn-Uow"/>
                             </connections>
