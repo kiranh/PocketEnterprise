@@ -108,8 +108,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="179" id="tbW-Wj-Qp7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -118,6 +119,7 @@
                                             <constraint firstItem="A6P-1D-f90" firstAttribute="leading" secondItem="aT3-16-ACj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2EU-uG-Rr5"/>
                                             <constraint firstItem="aT3-16-ACj" firstAttribute="leading" secondItem="R4E-yY-gUL" secondAttribute="leading" constant="23" id="3h2-AU-2pD"/>
                                             <constraint firstItem="aT3-16-ACj" firstAttribute="baseline" secondItem="A6P-1D-f90" secondAttribute="baseline" type="default" id="7Tb-cH-Hiy"/>
+                                            <constraint firstItem="aT3-16-ACj" firstAttribute="top" secondItem="R4E-yY-gUL" secondAttribute="top" constant="11" id="L9f-3V-htY"/>
                                             <constraint firstItem="A6P-1D-f90" firstAttribute="centerY" secondItem="R4E-yY-gUL" secondAttribute="centerY" type="default" id="Xhw-Fd-1Fv"/>
                                         </constraints>
                                     </tableViewCell>

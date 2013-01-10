@@ -44,5 +44,6 @@
 
 - (IBAction)loginButtonPressed:(id)sender {
     NSLog(@"Log In button was pressed!");
+    NSLog(@"%@",UIEmailTextField.text);
 }
 @end
