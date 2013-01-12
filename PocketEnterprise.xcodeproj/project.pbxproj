@@ -24,8 +24,9 @@
 		9F0600DC169D978900E9DE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B4169D978800E9DE1C /* Foundation.framework */; };
 		9F0600E4169D978900E9DE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600E2169D978900E9DE1C /* InfoPlist.strings */; };
 		9F0600E7169D978900E9DE1C /* PocketEnterpriseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */; };
-		9F060106169DABC600E9DE1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F060105169DABC600E9DE1C /* ViewController.m */; };
+		9F060106169DABC600E9DE1C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F060105169DABC600E9DE1C /* LoginViewController.m */; };
 		9FFBC29B16A17F1A002FCC1E /* banner-enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FFBC29A16A17F1A002FCC1E /* banner-enterprise.jpg */; };
+		9FFBC29F16A1AFA5002FCC1E /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBC29E16A1AFA5002FCC1E /* Group.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +62,11 @@
 		9F0600E3169D978900E9DE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F0600E5169D978900E9DE1C /* PocketEnterpriseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseTests.h; sourceTree = "<group>"; };
 		9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseTests.m; sourceTree = "<group>"; };
-		9F060104169DABC500E9DE1C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9F060105169DABC600E9DE1C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F060104169DABC500E9DE1C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9F060105169DABC600E9DE1C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9FFBC29A16A17F1A002FCC1E /* banner-enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "banner-enterprise.jpg"; sourceTree = "<group>"; };
+		9FFBC29D16A1AFA5002FCC1E /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		9FFBC29E16A1AFA5002FCC1E /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		A103E72D44C54E098B53FB6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,12 +130,13 @@
 		9F0600B8169D978800E9DE1C /* PocketEnterprise */ = {
 			isa = PBXGroup;
 			children = (
+				9FFBC29C16A1AF6B002FCC1E /* Models */,
 				9F0600C1169D978900E9DE1C /* PocketEnterpriseAppDelegate.h */,
 				9F0600C2169D978900E9DE1C /* PocketEnterpriseAppDelegate.m */,
 				9F0600CA169D978900E9DE1C /* MainStoryboard_iPhone.storyboard */,
 				9F0600CD169D978900E9DE1C /* MainStoryboard_iPad.storyboard */,
-				9F060104169DABC500E9DE1C /* ViewController.h */,
-				9F060105169DABC600E9DE1C /* ViewController.m */,
+				9F060104169DABC500E9DE1C /* LoginViewController.h */,
+				9F060105169DABC600E9DE1C /* LoginViewController.m */,
 				9F0600B9169D978800E9DE1C /* Supporting Files */,
 			);
 			path = PocketEnterprise;
@@ -170,6 +174,15 @@
 				9F0600E2169D978900E9DE1C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FFBC29C16A1AF6B002FCC1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FFBC29D16A1AFA5002FCC1E /* Group.h */,
+				9FFBC29E16A1AFA5002FCC1E /* Group.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +315,8 @@
 			files = (
 				9F0600BF169D978800E9DE1C /* main.m in Sources */,
 				9F0600C3169D978900E9DE1C /* PocketEnterpriseAppDelegate.m in Sources */,
-				9F060106169DABC600E9DE1C /* ViewController.m in Sources */,
+				9F060106169DABC600E9DE1C /* LoginViewController.m in Sources */,
+				9FFBC29F16A1AFA5002FCC1E /* Group.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

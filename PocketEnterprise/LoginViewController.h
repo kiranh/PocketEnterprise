@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
+#import <Group.h>
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *Email;
 @property (weak, nonatomic) IBOutlet UITextField *Password;
