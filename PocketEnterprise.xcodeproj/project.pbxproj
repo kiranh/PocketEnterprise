@@ -24,8 +24,8 @@
 		9F0600DC169D978900E9DE1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0600B4169D978800E9DE1C /* Foundation.framework */; };
 		9F0600E4169D978900E9DE1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F0600E2169D978900E9DE1C /* InfoPlist.strings */; };
 		9F0600E7169D978900E9DE1C /* PocketEnterpriseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */; };
-		9F0600FD169D9F6000E9DE1C /* PocketEnterpriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */; };
 		9F060106169DABC600E9DE1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F060105169DABC600E9DE1C /* ViewController.m */; };
+		9FFBC29B16A17F1A002FCC1E /* banner-enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FFBC29A16A17F1A002FCC1E /* banner-enterprise.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +61,9 @@
 		9F0600E3169D978900E9DE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F0600E5169D978900E9DE1C /* PocketEnterpriseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseTests.h; sourceTree = "<group>"; };
 		9F0600E6169D978900E9DE1C /* PocketEnterpriseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseTests.m; sourceTree = "<group>"; };
-		9F0600FB169D9F6000E9DE1C /* PocketEnterpriseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketEnterpriseViewController.h; sourceTree = "<group>"; };
-		9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketEnterpriseViewController.m; sourceTree = "<group>"; };
 		9F060104169DABC500E9DE1C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9F060105169DABC600E9DE1C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9FFBC29A16A17F1A002FCC1E /* banner-enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "banner-enterprise.jpg"; sourceTree = "<group>"; };
 		A103E72D44C54E098B53FB6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,8 +133,6 @@
 				9F0600CD169D978900E9DE1C /* MainStoryboard_iPad.storyboard */,
 				9F060104169DABC500E9DE1C /* ViewController.h */,
 				9F060105169DABC600E9DE1C /* ViewController.m */,
-				9F0600FB169D9F6000E9DE1C /* PocketEnterpriseViewController.h */,
-				9F0600FC169D9F6000E9DE1C /* PocketEnterpriseViewController.m */,
 				9F0600B9169D978800E9DE1C /* Supporting Files */,
 			);
 			path = PocketEnterprise;
@@ -149,6 +146,7 @@
 				9F0600BE169D978800E9DE1C /* main.m */,
 				9F0600C0169D978800E9DE1C /* PocketEnterprise-Prefix.pch */,
 				9F0600C4169D978900E9DE1C /* Default.png */,
+				9FFBC29A16A17F1A002FCC1E /* banner-enterprise.jpg */,
 				9F0600C6169D978900E9DE1C /* Default@2x.png */,
 				9F0600C8169D978900E9DE1C /* Default-568h@2x.png */,
 			);
@@ -253,6 +251,7 @@
 				9F0600C9169D978900E9DE1C /* Default-568h@2x.png in Resources */,
 				9F0600CC169D978900E9DE1C /* MainStoryboard_iPhone.storyboard in Resources */,
 				9F0600CF169D978900E9DE1C /* MainStoryboard_iPad.storyboard in Resources */,
+				9FFBC29B16A17F1A002FCC1E /* banner-enterprise.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +302,6 @@
 			files = (
 				9F0600BF169D978800E9DE1C /* main.m in Sources */,
 				9F0600C3169D978900E9DE1C /* PocketEnterpriseAppDelegate.m in Sources */,
-				9F0600FD169D9F6000E9DE1C /* PocketEnterpriseViewController.m in Sources */,
 				9F060106169DABC600E9DE1C /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
