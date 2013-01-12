@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 
 @interface PocketEnterpriseViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UITextField *UIEmailTextField;
