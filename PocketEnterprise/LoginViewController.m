@@ -57,7 +57,16 @@
                                                                 @"password_confirmation",
                                                                 nil]];*/
     
-    // Set up Article and Error Response Descriptors
+    //coredata related
+    
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    NSString *path = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Store.sqlite"];
+    [managedObjectStore addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:nil];
+    [managedObjectStore createManagedObjectContexts];
+    
+    
+    // Set up Group and Error Response Descriptors
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Group class]];
     [mapping addAttributeMappingsFromArray:@[@"groupID", @"name", @"createdAt"]];
     NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
@@ -80,7 +89,25 @@
     
     [objectManager.HTTPClient setAuthorizationHeaderWithUsername:Email.text password:Password.text];
     
-    [objectManager getObjectsAtPath:@"/groups.json"
+    // or directly from the HTTP client
+    NSURLRequest *request = [objectManager.HTTPClient requestWithMethod:@"GET" path:@"/groups.json" parameters:nil];
+    //RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[groupDescriptor]];
+    
+    RKManagedObjectRequestOperation *operation = [[RKManagedObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[groupDescriptor]];
+    operation.managedObjectContext = managedObjectStore.mainQueueManagedObjectContext;
+    operation.managedObjectCache = managedObjectStore.managedObjectCache;
+    
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        Group *group = [result firstObject];
+        NSLog(@"Mapped the group: %@", group.name);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Failed with error: %@", [error localizedDescription]);
+    }];
+
+    NSOperationQueue *operationQueue = [NSOperationQueue new];
+    [operationQueue addOperation:operation];
+    
+    /*[objectManager getObjectsAtPath:@"/groups.json"
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                 NSLog(@"It Worked: %@", [mappingResult array]);
@@ -89,16 +116,7 @@
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                 NSLog(@"It Failed: %@", error);
-                            }];
-    //First Trial
-    /*[objectManager getObjectsAtPath:@"/groups.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         NSLog(@"It Worked: %@", [mappingResult array]);
-         // Or if you're only expecting a single object:
-         NSLog(@"It Worked: %@", [mappingResult firstObject]);
-     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         NSLog(@"It Failed: %@", error);
-     }];*/
+                            }];*/
     
     
 }
