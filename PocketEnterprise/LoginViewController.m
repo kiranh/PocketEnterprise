@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Email.delegate = self;
+    Password.delegate = self;
 	// Do any additional setup after loading the view.
 }
 
@@ -35,6 +37,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];//Dismiss the keyboard.
+    //Add action you want to call here.
+    return YES;
 }
 
 - (IBAction)LoginButtonPressed:(id)sender {
@@ -45,17 +53,23 @@
     
     NSLog(@"Log In button was pressed!");
     NSLog(@"%@",Email.text);
+
+    [self userLoginProcess:sender];
+    
+}
+
+- (void)userLoginProcess:(id)sender {
     // Signup
     /*NSDictionary *params = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
-                                                                Email.text,
-                                                                Password.text,
-                                                                Password.text,
-                                                                nil]
-                                                       forKeys:[NSArray arrayWithObjects:
-                                                                @"email",
-                                                                @"password",
-                                                                @"password_confirmation",
-                                                                nil]];*/
+     Email.text,
+     Password.text,
+     Password.text,
+     nil]
+     forKeys:[NSArray arrayWithObjects:
+     @"email",
+     @"password",
+     @"password_confirmation",
+     nil]];*/
     
     //coredata related
     
@@ -89,6 +103,8 @@
     
     [objectManager.HTTPClient setAuthorizationHeaderWithUsername:Email.text password:Password.text];
     
+    objectManager.managedObjectStore = managedObjectStore;
+    
     // or directly from the HTTP client
     NSURLRequest *request = [objectManager.HTTPClient requestWithMethod:@"GET" path:@"/groups.json" parameters:nil];
     //RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[groupDescriptor]];
@@ -100,24 +116,23 @@
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
         Group *group = [result firstObject];
         NSLog(@"Mapped the group: %@", group.name);
+        [self performSegueWithIdentifier:@"LoginSegue" sender:sender];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Failed with error: %@", [error localizedDescription]);
     }];
-
+    
     NSOperationQueue *operationQueue = [NSOperationQueue new];
     [operationQueue addOperation:operation];
     
     /*[objectManager getObjectsAtPath:@"/groups.json"
-                         parameters:nil
-                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                NSLog(@"It Worked: %@", [mappingResult array]);
-                                //  We found a matching login user!  Force the segue transition to the next view
-                                [self performSegueWithIdentifier:@"LoginSegue" sender:sender];
-                            }
-                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                NSLog(@"It Failed: %@", error);
-                            }];*/
-    
-    
+     parameters:nil
+     success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+     NSLog(@"It Worked: %@", [mappingResult array]);
+     //  We found a matching login user!  Force the segue transition to the next view
+     [self performSegueWithIdentifier:@"LoginSegue" sender:sender];
+     }
+     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+     NSLog(@"It Failed: %@", error);
+     }];*/
 }
 @end

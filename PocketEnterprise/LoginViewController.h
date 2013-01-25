@@ -10,11 +10,12 @@
 #import <RestKit/RestKit.h>
 #import <Group.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *Email;
 @property (weak, nonatomic) IBOutlet UITextField *Password;
 
+- (void)userLoginProcess:(id)sender;
 - (IBAction)LoginButtonPressed:(id)sender;
 
 @end
